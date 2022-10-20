@@ -18,16 +18,16 @@
      
       </div>
       <div class="contact">
-        <h3>Email Us</h3>
-        <div class="alert">Your message has been sent</div>
+        <h3>Demo</h3>
+        <div class="alert">You're Awesome !!!! Your message has been sent</div>
         <form id="contactForm">
           <p>
             <label>Name</label>
             <input type="text" name="name" id="name" required>
           </p>
           <p>
-            <label>Company</label>
-            <input type="text" name="company" id="company">
+            <label>City</label>
+            <input type="city" name="city" id="city">
           </p>
           <p>
             <label>Email Address</label>
@@ -76,13 +76,13 @@ var config = {
   
     // Get values
     var name = getInputVal('name');
-    var company = getInputVal('company');
+    var city = getInputVal('city');
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var message = getInputVal('message');
   
     // Save message
-    saveMessage(name, company, email, phone, message);
+    saveMessage(name, city, email, phone, message);
   
     // Show alert
     document.querySelector('.alert').style.display = 'block';
@@ -102,11 +102,11 @@ var config = {
   }
   
   // Save message to firebase
-  function saveMessage(name, company, email, phone, message){
+  function saveMessage(name, city, email, phone, message){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       name: name,
-      company:company,
+      city:city,
       email:email,
       phone:phone,
       message:message
