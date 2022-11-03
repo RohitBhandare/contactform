@@ -1,7 +1,9 @@
 *{
     box-sizing: border-box;
   }
-  
+  container.hidden {
+  display: none;
+}
   body{
     background:#e792e1;
     color:#487466;
